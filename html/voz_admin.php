@@ -29,7 +29,10 @@ if (@!$_SESSION['user']) {
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
 
     <!-- Animation library for notifications   -->
@@ -122,8 +125,8 @@ if (@!$_SESSION['user']) {
 <center> 
 
 <form>
-
-<input type="button" onclick="funcion()" value="Microfono">
+	
+<button class="btn-floating btn waves-effect waves-light red" onclick="funcion()"><i class="material-icons">mic</i></button>
 
 </form>
 
