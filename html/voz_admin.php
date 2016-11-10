@@ -119,27 +119,17 @@ if (@!$_SESSION['user']) {
             </div>
         </nav>
 
-<center>
+<center> 
 
-<script>
-window.onload = function(){
-    if (annyang) {
-        var commands = {
-            'hola': function() {
-               //alert('Bienvenido');
-               //exec("sudo python /var/www/html/encender_lampara.py");
-            }
-        };
-        annyang.addCommands(commands);
-        annyang.start(); 
-    }
-}
-</script>
+<form>
 
+<input type="button" onclick="funcion()" value="Microfono">
+
+</form>
 
 </center>
 
-      
+
 </body>
 
     <!--   Core JS Files   -->
@@ -149,7 +139,9 @@ window.onload = function(){
 	<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 	
-	
+	<!-- Control por Voz  -->
+	<script type="text/javascript" src="voz/voice_admin.js"></script>
+	<script src="voz/annyang.min.js"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<!--<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>-->
@@ -168,7 +160,7 @@ window.onload = function(){
 	
 	
 
-	<!--<script type="text/javascript">
+	<script type="text/javascript">
     	
         $(document).ready(function(){
 
@@ -176,6 +168,8 @@ window.onload = function(){
 
     	});
 
-	</script>-->
+
+
+	</script>
 
 </html>

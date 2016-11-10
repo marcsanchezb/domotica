@@ -113,8 +113,16 @@ if (@!$_SESSION['user']) {
             </div>
         </nav>
 
-<center>
+<center> 
+
+<form>
+
+<input type="button" onclick="funcion()" value="Microfono">
+
+</form>
+
 </center>
+
 
       
 </body>
@@ -126,7 +134,9 @@ if (@!$_SESSION['user']) {
 	<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 	
-	
+	<!-- Control por Voz  -->
+	<script type="text/javascript" src="voz/voice.js"></script>
+	<script src="voz/annyang.min.js"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<!--<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>-->
@@ -145,7 +155,7 @@ if (@!$_SESSION['user']) {
 	
 	
 
-	<!--<script type="text/javascript">
+	<script type="text/javascript">
     	
         $(document).ready(function(){
 
@@ -153,6 +163,8 @@ if (@!$_SESSION['user']) {
 
     	});
 
-	</script>-->
+
+
+	</script>
 
 </html>
