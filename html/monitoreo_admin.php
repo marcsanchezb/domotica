@@ -29,12 +29,16 @@ if (@!$_SESSION['user']) {
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
      <!--     webcam server    -->
      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
      <script src='http://api.html5media.info/1.1.8/html5media.min.js'></script>
      <script src="js/index.js"></script>
+
+     <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
 
     <!-- Animation library for notifications   -->
@@ -128,8 +132,20 @@ if (@!$_SESSION['user']) {
         </nav>
 
 <center>
-<img align=center class="materialboxed" width="60%" src="http://10.18.10.108:8081">
+	
+<img id="myImage" src="images/interior-casa.jpg" width="640" height="426">
+
 </center>
+
+<div  align="center">
+<button class="btn-floating btn waves-effect waves-light blue" onclick="document.getElementById('myImage').src='http://localhost:8081'"><i class="material-icons">videocam</i></button>
+
+<button class="btn-floating btn waves-effect waves-light blue" onclick="document.getElementById('myImage').src='images/interior-casa.jpg'"><i class="material-icons">videocam_off</i></button>
+
+
+<!-- <img align=center class="materialboxed" width="60%" src="http://localhost:8081"> -->
+</div>
+
 
       
 </body>
