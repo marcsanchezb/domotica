@@ -30,6 +30,14 @@ if (@!$_SESSION['user']) {
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
+     <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+      
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
 
 
     <!-- Animation library for notifications   -->
@@ -119,8 +127,9 @@ if (@!$_SESSION['user']) {
             </div>
         </nav>
 
+
 <center>
-<img class="materialboxed" width="60%" src="images/sala-de-estar-cortina.jpg">
+<img class="materialboxed" with="10%" src="images/sala-de-estar-cortina.jpg">
 </center>
 
 <!-- Botones encender y apagar -->
@@ -129,29 +138,107 @@ if (@!$_SESSION['user']) {
 						<br>
 						<div  align="center">
 						<!-- El name debe ser el mismo que el php -->
-							<button type="submit" name="encender"  class="z-depth-2 btn btn-sucess btn-info btn-fill pull-center" value="Encender" align="center">Encender</button>
-							<button type="submit" name="apagar" class="z-depth-2 btn btn-sucess btn-info btn-fill pull-center" value="Apagar"  align="center">Apagar</button>
+							<button type="submit" name="luz_sala_on" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center">ON</button>
+							<button type="submit" name="luz_sala_off" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center">OFF</button>
 						</div>
 						<br>
 					</form>
 					
+
+
 					<!-- PHP Donde si se pula el boton encender cuyo name es encender, se ejecuta el script que se encuentra en el directorio indicado -->
-					<?php
+					
+
+									<?php
+
+									if (isset($_POST['luz_sala_on'])) {
+									
+										exec("sudo python /var/www/html/python/encender_luz_sala.py");
+										/*echo "<img src=images/light-bulb-on2.png>"; */ 
+									}
+									elseif (isset($_POST['luz_sala_off'])) {
+										
+										exec("sudo python /var/www/html/python/apagar_luz_sala.py");
+										/*echo "<img src=images/light-bulb-off2.png>"; */
+										
+										}
+									?>
+									
+									
+									
+<center>
+<img class="materialboxed" with="10%" src="images/interior_casa_cocina.jpg">
+</center>
+
+<!-- Botones encender y apagar -->
+					<form action="" method="post">
+						<br>
+						<br>
+						<div  align="center">
+						<!-- El name debe ser el mismo que el php -->
+							<button type="submit" name="luz_cocina_on" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center">ON</button>
+							<button type="submit" name="luz_cocina_off" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center">OFF</button>
+						</div>
+						<br>
+					</form>
+					
 
 
-						if (isset($_POST['encender'])) {
-						
-							exec("sudo python /var/www/html/encender_lampara.py");
-							
-						}
-						elseif (isset($_POST['apagar'])) {
-							
-							exec("sudo python /var/www/html/apagar_lampara.py");
-							
-							}
-							
-					?>
+					<!-- PHP Donde si se pula el boton encender cuyo name es encender, se ejecuta el script que se encuentra en el directorio indicado -->
+					
 
+									<?php
+
+									if (isset($_POST['luz_cocina_on'])) {
+									
+										exec("sudo python /var/www/html/python/encender_luz_cocina.py");
+										/*echo "<img src=images/light-bulb-on2.png>"; */ 
+									}
+									elseif (isset($_POST['luz_cocina_off'])) {
+										
+										exec("sudo python /var/www/html/python/apagar_luz_cocina.py");
+										/*echo "<img src=images/light-bulb-off2.png>"; */
+										
+										}
+									?>
+									
+<center>
+	
+<img class="materialboxed" with="10%" src="images/bed-bedroom-home.jpg">
+
+</center>
+
+<!-- Botones encender y apagar -->
+					<form action="" method="post">
+						<br>
+						<br>
+						<div  align="center">
+						<!-- El name debe ser el mismo que el php -->
+							<button type="submit" name="luz_dormitorio_on" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center">ON</button>
+							<button type="submit" name="luz_dormitorio_off" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center">OFF</button>
+						</div>
+						<br>
+					</form>
+					
+
+
+					<!-- PHP Donde si se pula el boton encender cuyo name es encender, se ejecuta el script que se encuentra en el directorio indicado -->
+					
+
+									<?php
+
+									if (isset($_POST['luz_dormitorio_on'])) {
+									
+										exec("sudo python /var/www/html/python/encender_luz_dormitorio.py");
+										/*echo "<img src=images/light-bulb-on2.png>"; */ 
+									}
+									elseif (isset($_POST['luz_dormitorio_off'])) {
+										
+										exec("sudo python /var/www/html/python/apagar_luz_dormitorio.py");
+										/*echo "<img src=images/light-bulb-off2.png>"; */
+										
+										}
+									?>																	
 </body>
 
     <!--   Core JS Files   -->
@@ -162,6 +249,9 @@ if (@!$_SESSION['user']) {
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 	
 	
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<!--<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>-->
