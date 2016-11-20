@@ -124,11 +124,9 @@ if (@!$_SESSION['user']) {
 
 <center> 
 
-<form>
 	
 <button class="btn-floating btn waves-effect waves-light red" onclick="funcion()"><i class="material-icons">mic</i></button>
 
-</form>
 
 </center>
 

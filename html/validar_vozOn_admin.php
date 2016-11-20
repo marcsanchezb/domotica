@@ -51,6 +51,7 @@ if($valor=='luz cocina y dormitorio' || $valor=='fuz cocina y dormitorio' || $va
 }
 */
 
+
  echo "<script>window.close();</script>";
  
 ?>
