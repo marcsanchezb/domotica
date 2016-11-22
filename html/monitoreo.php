@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <?php
 session_start();
@@ -7,7 +7,7 @@ if (@!$_SESSION['user']) {
 }
 ?>
 
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8" />
 	<link href="images/graphicloads.ico" rel="shortcut icon">
@@ -29,11 +29,16 @@ if (@!$_SESSION['user']) {
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!--     webcam server    -->
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
-    <script src='http://api.html5media.info/1.1.8/html5media.min.js'></script>
-    <script src="js/index.js"></script>
+
+     <!--     webcam server    -->
+     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
+     <script src='http://api.html5media.info/1.1.8/html5media.min.js'></script>
+     <script src="js/index.js"></script>
+
+     <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
 
     <!-- Animation library for notifications   -->
@@ -41,8 +46,10 @@ if (@!$_SESSION['user']) {
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <!-- <link href="assets/css/demo.css" rel="stylesheet" />-->
+     
 
 </head>
+
 <body>
 
 <div class="wrapper">
@@ -103,28 +110,71 @@ if (@!$_SESSION['user']) {
                         <li>
                            <a href="index.php">
                            <i class="pe-7s-home"></i>
-                               Inicio
+                               <strong>Inicio</strong>
                             </a>
                         </li>
                         <li>
                             <a href="logout.php">
                             <i class="pe-7s-power"></i>
-                                Salir
+                               <strong>Salir</strong>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+<div class="content" >
+        <div class="container-fluid">
+            <div class="row">
+
+<div class="content" >
+        <div class="container-fluid">
+            <div class="row">
 
 <center>
-<img align=center class="materialboxed" width="60%" src="http://192.168.10.105:8081">
+
+<div class="col s12 m6">
+          <div class="card z-depth-5">
+            <div class="card-image z-depth-5">
+              <img id="myImage" src="images/zona_interior.png">
+           
+              <div align="center" class="card">
+
+               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage').src='http://localhost:8081'"><i class="material-icons">videocam</i></button>
+               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage').src='images/zona_interior.png'"><i class="material-icons">videocam_off</i></button>
+
+            </div>
+
+            
+          </div>
+        </div>
+            </div>
+</center>
+
+ <center>
+
+<div class="col s12 m6">
+          <div class="card z-depth-5">
+            <div class="card-image z-depth-5">
+              <img id="myImage2" src="images/zona_exterior.png">
+           
+              <div align="center" class="card">
+
+               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage2').src='images/no_signal.jpg'"><i class="material-icons">videocam</i></button>
+               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage2').src='images/zona_exterior.png'"><i class="material-icons">videocam_off</i></button>
+
+            </div>
+
+            
+          </div>
+        </div>
+            </div>
 </center>
 
       
 </body>
 
-     <!--   Core JS Files   -->
+    <!--   Core JS Files   -->
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	
@@ -160,5 +210,4 @@ if (@!$_SESSION['user']) {
 
 	</script>-->
 	
-
 </html>

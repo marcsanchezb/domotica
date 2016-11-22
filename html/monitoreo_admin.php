@@ -46,11 +46,9 @@ if (@!$_SESSION['user']) {
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <!-- <link href="assets/css/demo.css" rel="stylesheet" />-->
-     
-     
-
 
 </head>
+
 <body>
 
 <div class="wrapper">
@@ -131,21 +129,51 @@ if (@!$_SESSION['user']) {
             </div>
         </nav>
 
-<center>
-	
-<img id="myImage" src="images/interior-casa.jpg" width="640" height="426">
 
+
+<div class="content" >
+        <div class="container-fluid">
+            <div class="row">
+
+<center>
+
+<div class="col s12 m6">
+          <div class="card z-depth-5">
+            <div class="card-image z-depth-5">
+              <img id="myImage" src="images/zona_interior.png">
+           
+              <div align="center" class="card">
+
+               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage').src='http://localhost:8081'"><i class="material-icons">videocam</i></button>
+               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage').src='images/zona_interior.png'"><i class="material-icons">videocam_off</i></button>
+
+            </div>
+
+            
+          </div>
+        </div>
+            </div>
 </center>
 
-<div  align="center">
-<button class="btn-floating btn waves-effect waves-light blue" onclick="document.getElementById('myImage').src='http://localhost:8081'"><i class="material-icons">videocam</i></button>
+ <center>
 
-<button class="btn-floating btn waves-effect waves-light blue" onclick="document.getElementById('myImage').src='images/interior-casa.jpg'"><i class="material-icons">videocam_off</i></button>
+<div class="col s12 m6">
+          <div class="card z-depth-5">
+            <div class="card-image z-depth-5">
+              <img id="myImage2" src="images/zona_exterior.png">
+           
+              <div align="center" class="card">
 
+               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage2').src='images/no_signal.jpg'"><i class="material-icons">videocam</i></button>
+               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage2').src='images/zona_exterior.png'"><i class="material-icons">videocam_off</i></button>
 
-<!-- <img align=center class="materialboxed" width="60%" src="http://localhost:8081"> -->
-</div>
+            </div>
 
+            
+          </div>
+        </div>
+            </div>
+</center>
 
       
 </body>
