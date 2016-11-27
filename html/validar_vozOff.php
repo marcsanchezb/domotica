@@ -23,6 +23,26 @@ if($valor=='luz dormitorio' || $valor=='fuz dormitorio' || $valor=='suz dormitor
 }
 
 
+if($valor=='luz comedor' || $valor=='fuz comedor' || $valor=='suz comedor')
+{
+ exec("sudo python /var/www/html/python/apagar_luz_comedor.py");
+ echo '<script language="javascript">alert("Se ha apagado la luz del Comedor");</script>'; 
+}
+
+
+if($valor=='luz jardín' || $valor=='fuz jardín' || $valor=='suz jardín')
+{
+ //exec("sudo python /var/www/html/python/apagar_luz_jardin.py"); AUTORIZADO SOLO PARA ADMINISTRADOR
+ echo '<script language="javascript">alert("No está autorizado para apagar la luz del Jardin");</script>';  
+}
+
+if($valor=='luz garaje' || $valor=='fuz garaje' || $valor=='suz garaje')
+{
+ exec("sudo python /var/www/html/python/apagar_luz_garaje.py");
+ echo '<script language="javascript">alert("Se ha apagado la luz del Garaje");</script>'; 
+}
+
+
 if($valor=='todas las luces' || $valor=='todas as luces' || $valor=='fodas las luces')
 {
  //exec("sudo python /var/www/html/python/apagar_todas_luces.py"); AUTORIZADO SOLO PARA ADMINISTRADOR

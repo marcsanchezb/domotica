@@ -125,7 +125,7 @@ if (@!$_SESSION['user']) {
 <center> 
 
 	
-<button class="btn-floating btn waves-effect waves-light red" onclick="funcion()"><i class="material-icons">mic</i></button>
+<button class="btn-floating btn waves-effect waves-light red" onclick="funcion(), Materialize.toast('Hable ahora', 5000)"><i class="material-icons">mic</i></button>
 
 
 </center>
@@ -143,6 +143,10 @@ if (@!$_SESSION['user']) {
 	<!-- Control por Voz  -->
 	<script type="text/javascript" src="voz/voice_admin.js"></script>
 	<script src="voz/annyang.min.js"></script>
+	
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<!--<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>-->
