@@ -31,13 +31,14 @@ if (@!$_SESSION['user']) {
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!--     webcam server    -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
+    <script src='http://api.html5media.info/1.1.8/html5media.min.js'></script>
+    
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-     <!--     webcam server    -->
-     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
-     <script src='http://api.html5media.info/1.1.8/html5media.min.js'></script>
-     <script src="js/index.js"></script>
-
-     <!--Import materialize.css-->
+    <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
 
@@ -64,13 +65,13 @@ if (@!$_SESSION['user']) {
             </div>
 
             <ul class="nav">
-                <li class="active">
+                <li>
                     <a href="luces_admin.php">
                         <i class="pe-7s-light"></i>
                         <p>Iluminación</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="monitoreo_admin.php">
                         <i class="pe-7s-video"></i>
                         <p>Monitoreo</p>
@@ -102,7 +103,7 @@ if (@!$_SESSION['user']) {
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -114,14 +115,14 @@ if (@!$_SESSION['user']) {
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="admin.php">
-                           <i class="pe-7s-home"></i>
-                               <strong>Inicio</strong>
+                           <div class="pe-7s-home"></div>
+                               <b>Inicio</b>
                             </a>
                         </li>
                         <li>
                             <a href="logout.php">
-                            <i class="pe-7s-power"></i>
-                                <strong>Salir</strong>
+                            <div class="pe-7s-power"></div>
+                                <b>Salir</b>
                             </a>
                         </li>
                     </ul>
@@ -144,8 +145,8 @@ if (@!$_SESSION['user']) {
            
               <div align="center" class="card">
 
-               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage').src='http://localhost:8081'"><i class="material-icons">videocam</i></button>
-               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage').src='images/zona_interior.png'"><i class="material-icons">videocam_off</i></button>
+               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large waves-effect waves-light blue darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mostrar" onclick="document.getElementById('myImage').src='http://192.168.1.5:8081'"><i class="material-icons">videocam</i></button>
+               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large waves-effect waves-light blue darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ocultar" onclick="document.getElementById('myImage').src='images/zona_interior.png'"><i class="material-icons">videocam_off</i></button>
 
             </div>
 
@@ -164,8 +165,8 @@ if (@!$_SESSION['user']) {
            
               <div align="center" class="card">
 
-               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage2').src='images/no_signal.jpg'"><i class="material-icons">videocam</i></button>
-               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage2').src='images/zona_exterior.png'"><i class="material-icons">videocam_off</i></button>
+               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large waves-effect waves-light blue darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mostrar" onclick="document.getElementById('myImage2').src='images/no_signal.jpg'"><i class="material-icons">videocam</i></button>
+               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large waves-effect waves-light blue darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ocultar" onclick="document.getElementById('myImage2').src='images/zona_exterior.png'"><i class="material-icons">videocam_off</i></button>
 
             </div>
 
@@ -185,7 +186,9 @@ if (@!$_SESSION['user']) {
 	<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 	
-	
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<!--<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>-->
@@ -202,16 +205,13 @@ if (@!$_SESSION['user']) {
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<!--<script src="assets/js/demo.js"></script>-->
 	
-	
 
-	<!--<script type="text/javascript">
+	<script type="text/javascript">
     	
-        $(document).ready(function(){
+    $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+ 	 });
 
-        	demo.initChartist();
-
-    	});
-
-	</script>-->
+	</script>
 	
 </html>

@@ -30,14 +30,14 @@ if (@!$_SESSION['user']) {
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
-     <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
-
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    
+    <!--Dialogs-->
+    <link href="dialogs/css/sweetalert.css" rel="stylesheet" type="text/css"/>
 
 
     <!-- Animation library for notifications   -->
@@ -106,15 +106,15 @@ if (@!$_SESSION['user']) {
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                           <a href="admin.php">
-                           <i class="pe-7s-home"></i>
-                               <strong>Inicio</strong>
+                           <a href="index.php">
+                           <div class="pe-7s-home"></div>
+                               <b>Inicio</b>
                             </a>
                         </li>
                         <li>
                             <a href="logout.php">
-                            <i class="pe-7s-power"></i>
-                                <strong>Salir</strong>
+                            <div class="pe-7s-power"></div>
+                                <b>Salir</b>
                             </a>
                         </li>
                     </ul>
@@ -189,35 +189,6 @@ if (@!$_SESSION['user']) {
              <div class="col s12 m4">
           <div class="card z-depth-5">
             <div class="card-image z-depth-5">
-              <img src="images/comedor.jpg">
-            <center>
-            <div class="header">
-                <h4 class="title">Comedor</h4>
-                <p class="category">Control para la iluminación del Comedor</p>
-            </div>
-            </center>
-              <div align="center" class="card-action">
-             
-            <!-- Botones encender y apagar -->
-               <form action="" method="post">
-
-            <!-- El name debe ser el mismo que el php -->
-               <button type="submit" name="encender" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center blue darken-1">ON</button>
-               <button type="submit" name="apagar" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center blue darken-1">OFF</button>
-
-               </form>
-            </div>
-
-            <div class="footer">
-            </div>
-          </div>
-        </div>
-            </div>
-
-
-  <div class="col s12 m4">
-          <div class="card z-depth-5">
-            <div class="card-image z-depth-5">
               <img src="images/dormitorio.jpg">
             <center>
             <div class="header">
@@ -233,6 +204,35 @@ if (@!$_SESSION['user']) {
             <!-- El name debe ser el mismo que el php -->
                <button type="submit" name="encender_dormitorio" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center blue darken-1">ON</button>
                <button type="submit" name="apagar_dormitorio" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center blue darken-1">OFF</button>
+
+               </form>
+            </div>
+
+            <div class="footer">
+            </div>
+          </div>
+        </div>
+            </div>
+
+
+  <div class="col s12 m4">
+          <div class="card z-depth-5">
+            <div class="card-image z-depth-5">
+              <img src="images/comedor.jpg">
+            <center>
+            <div class="header">
+                <h4 class="title">Comedor</h4>
+                <p class="category">Control para la iluminación del Comedor</p>
+            </div>
+            </center>
+              <div align="center" class="card-action">
+             
+            <!-- Botones encender y apagar -->
+               <form action="" method="post">
+
+            <!-- El name debe ser el mismo que el php -->
+               <button type="submit" name="encender_comedor" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center blue darken-1">ON</button>
+               <button type="submit" name="apagar_comedor" class="btn-floating btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center blue darken-1">OFF</button>
 
                </form>
             </div>
@@ -299,6 +299,42 @@ if (@!$_SESSION['user']) {
           </div>
         </div>
             </div>
+            
+               <div class="col s12 m4">
+          
+            </div>
+
+ 		<div class="col s12 m4">
+          <div class="card z-depth-5">
+            <div class="card-image z-depth-5">
+              <img src="images/casa1.jpg">
+            <center>
+            <div class="header">
+                <h4 class="title">Casa</h4>
+                <p class="category">Solo para usuarios Administradores</p>
+            </div>
+            </center>
+              <div align="center" class="card-action">
+             
+            <!-- Botones encender y apagar -->
+               <form action="" method="post">
+
+            <!-- El name debe ser el mismo que el php -->
+               <button type="submit" name="encender_todo" class="btn-floating disabled btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center blue darken-1">ON</button>
+               <button type="submit" name="apagar_todo" class="btn-floating disabled btn-large z-depth-2 btn btn-sucess btn-info btn-fill pull-center blue darken-1">OFF</button>
+
+               </form>
+            </div>
+
+            <div class="footer">
+            </div>
+          </div>
+        </div>
+            </div>
+
+
+        </div>
+  </div>
 
 
 
@@ -318,6 +354,9 @@ if (@!$_SESSION['user']) {
 	<!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    
+    <!--Dialogs-->
+    <script src="dialogs/js/sweetalert.min.js"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<!--<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>-->
@@ -336,7 +375,7 @@ if (@!$_SESSION['user']) {
 	
 	
 
-	<!--<script type="text/javascript">
+	<script type="text/javascript">
     	
         $(document).ready(function(){
 
@@ -344,64 +383,113 @@ if (@!$_SESSION['user']) {
 
     	});
 
-	</script>-->
+	</script>
 
 
 
 <!-- PHP Donde si se pula el boton encender cuyo name es encender, se ejecuta el script que se encuentra en el directorio indicado -->
                     
-                                    <?php
+                                     <?php
 
                                     if (isset($_POST['encender_sala'])) {
                                     
-                                        exec("sudo python /var/www/html/encender_luz_sala.py");
-                                        /*echo "<img src=images/light-bulb-on2.png>";*/
-                                        /*echo '<script>alert("Se ha encendido la luz de la Sala")</script>';*/ 
+                                        exec("sudo python /var/www/html/python/encender_luz_sala.py");
+                                        echo '<script>swal("Sala", "Se ha encendido la luz de la Sala")</script>';
                                     }
 
                                     elseif (isset($_POST['apagar_sala'])) {
                                         
-                                        exec("sudo python /var/www/html/apagar_luz_sala.py");
-                                        /*echo "<img src=images/light-bulb-off2.png>";*/ 
-                                        /*echo '<script>alert("Se ha apagado la luz de la Sala")</script>';*/ 
+                                        exec("sudo python /var/www/html/python/apagar_luz_sala.py");
+                                        echo '<script>swal("Sala", "Se ha apagado la luz de la Sala")</script>';
                                         
                                         }
 
  									elseif (isset($_POST['encender_cocina'])) {
                                         
-                                        exec("sudo python /var/www/html/encender_luz_cocina.py");
-                                        /*echo "<img src=images/light-bulb-off2.png>";*/ 
-                                        /*echo '<script>alert("Se ha encendido la luz de la Cocina")</script>';*/ 
+                                        exec("sudo python /var/www/html/python/encender_luz_cocina.py");
+                                        echo '<script>swal("Cocina", "Se ha encendido la luz de la Cocina")</script>';
                                         
                                         }
 
                                     elseif (isset($_POST['apagar_cocina'])) {
                                         
-                                        exec("sudo python /var/www/html/apagar_luz_cocina.py");
-                                        /*echo "<img src=images/light-bulb-off2.png>";*/ 
-                                        /*echo '<script>alert("Se ha apagado la luz de la Cocina")</script>';*/ 
+                                        exec("sudo python /var/www/html/python/apagar_luz_cocina.py");
+                                        echo '<script>swal("Cocina", "Se ha apagado la luz de la Cocina")</script>';
                                         
                                         }
 
                                     elseif (isset($_POST['encender_dormitorio'])) {
                                         
-                                        exec("sudo python /var/www/html/encender_luz_dormitorio.py");
-                                        /*echo "<img src=images/light-bulb-off2.png>";*/ 
-                                        /*echo '<script>alert("Se ha encendido la luz de la Dormitorio")</script>';*/ 
+                                        exec("sudo python /var/www/html/python/encender_luz_dormitorio.py");
+                                        echo '<script>swal("Dormitorio", "Se ha encendido la luz del Dormitorio")</script>';
                                         
                                         }
 
                                     elseif (isset($_POST['apagar_dormitorio'])) {
                                         
-                                        exec("sudo python /var/www/html/apagar_luz_dormitorio.py");
-                                        /*echo "<img src=images/light-bulb-off2.png>";*/ 
-                                        /*echo '<script>alert("Se ha apagado la luz de la Dormitorio")</script>';*/ 
+                                        exec("sudo python /var/www/html/python/apagar_luz_dormitorio.py");
+                                        echo '<script>swal("Dormitorio", "Se ha apagado la luz del dormitorio")</script>';
+                                        
+                                        }
+                                        
+                                    elseif (isset($_POST['encender_comedor'])) {
+                                        
+                                        exec("sudo python /var/www/html/python/encender_luz_comedor.py");
+                                        echo '<script>swal("Comedor", "Se ha encendido la luz del Comedor")</script>';
                                         
                                         }
 
+                                    elseif (isset($_POST['apagar_comedor'])) {
+                                        
+                                        exec("sudo python /var/www/html/python/apagar_luz_comedor.py");
+                                        echo '<script>swal("Comedor", "Se ha apagado la luz del Comedor")</script>';
+                                        
+                                        }
 
+									elseif (isset($_POST['encender_jardin'])) {
+                                        
+                                        exec("sudo python /var/www/html/python/encender_luz_jardin.py");
+                                        echo '<script>swal("Jardín", "Se ha encendido la luz del Jardín")</script>';
+                                        
+                                        }
+
+                                    elseif (isset($_POST['apagar_jardin'])) {
+                                        
+                                        exec("sudo python /var/www/html/python/apagar_luz_jardin.py");
+                                        echo '<script>swal("Jardín", "Se ha apagado la luz del Jardín")</script>';
+                                        
+                                        }
+                                        
+                                        elseif (isset($_POST['encender_garaje'])) {
+                                        
+                                        exec("sudo python /var/www/html/python/encender_luz_garaje.py");
+                                        echo '<script>swal("Garaje", "Se ha encendido la luz del Garaje")</script>';
+                                        
+                                        }
+
+                                    elseif (isset($_POST['apagar_garaje'])) {
+                                        
+                                        exec("sudo python /var/www/html/python/apagar_luz_garaje.py");
+                                        echo '<script>swal("Garaje", "Se ha apagado la luz del Garaje")</script>';
+                                        
+                                        }
+
+                                    elseif (isset($_POST['encender_todo'])) {
+                                        
+                                        exec("sudo python /var/www/html/python/encender_todas_luces.py");
+                                        echo '<script>swal("Casa", "Se han encendido todas las luces de la casa")</script>';
+                                        
+                                        }
+
+                                    elseif (isset($_POST['apagar_todo'])) {
+                                        
+                                        exec("sudo python /var/www/html/python/apagar_todas_luces.py");
+                                        echo '<script>swal("Casa", "Se han apagado todas las luces de la casa")</script>';
+                                        
+                                        }
 
                                     ?>
+
 
 
 

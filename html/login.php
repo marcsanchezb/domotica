@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -21,12 +21,12 @@
 <body class="page-login">
 
    <div class="center">
-      <div class="card bordered z-depth-2" style="margin:0% auto; max-width:400px;">
+      <div class="card bordered z-depth-3" style="margin:0% auto; max-width:400px;">
         <div class="card-header">
-        <img src="images/logo.jpg" alt="" class="z-depth-2 responsive-img valign profile-image-login">
+        <img src="images/logo.jpg" alt="" class="z-depth-3 responsive-img valign profile-image-login">
    </div>
         <div class="card-content">
-          <form method="POST" action="validar.php">
+          <form method="POST" action="validar_login.php">
             <div class="input-field col s12">
               <input name="usuario" type="text" class="validate">
               <label for="usuario">Usuario</label>
@@ -38,7 +38,7 @@
             <br>
               <input type="checkbox" class="filled-in" id="filled-in-box"/>
               <label for="filled-in-box">Recordar Contraseña</label>
-            <button type="submit" class="z-depth-2 btn btn-sucess blue-grey right waves-effect waves-light white-text">Iniciar</button>
+            <button type="submit" class="btn right z-depth-3 waves-effect waves-light blue-grey">Iniciar</button>
           </form>
         </div>
         

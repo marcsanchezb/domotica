@@ -30,7 +30,11 @@ if (@!$_SESSION['user']) {
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
+	<!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
     <!-- Animation library for notifications   -->
     <!-- <link href="assets/css/animate.min.css" rel="stylesheet"/>-->
@@ -53,7 +57,7 @@ if (@!$_SESSION['user']) {
             </div>
 
             <ul class="nav">
-                <li class="active">
+                <li>
                     <a href="luces_admin.php">
                         <i class="pe-7s-light"></i>
                         <p>Iluminación</p>
@@ -77,7 +81,7 @@ if (@!$_SESSION['user']) {
                         <p>Control por Voz</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="usuario.php">
                         <i class="pe-7s-users"></i>
                         <p>Registro de Usuarios</p>
@@ -103,14 +107,14 @@ if (@!$_SESSION['user']) {
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="admin.php">
-                           <i class="pe-7s-home"></i>
-                               <strong>Inicio</strong>
+                           <div class="pe-7s-home"></div>
+                               <b>Inicio</b>
                             </a>
                         </li>
                         <li>
                             <a href="logout.php">
-                            <i class="pe-7s-power"></i>
-                                <strong>Salir</strong>
+                            <div class="pe-7s-power"></div>
+                                <b>Salir</b>
                             </a>
                         </li>
                     </ul>
@@ -122,18 +126,29 @@ if (@!$_SESSION['user']) {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card">
+                        <div class="card z-depth-4">
                             <div class="header">
-                                <h4 class="title">Registre los usuarios que utilizarán el sistema</h4>
+                                <h5 class="title">Registre los usuarios que utilizarán el sistema</h5>
+                                <br></br>
                             </div>
                             <div class="content">
                                 <form method="post" action="registro.php">
                                     <div class="row">
                                         
                                         <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label><strong>Nombre y Apellidos</strong></label>
-                                                <input name="realname" type="text" class="form-control" placeholder="Nombre y Apellidos">
+                                            <div class="input-field col s12">
+                                                <label><b>Nombre y Apellidos</b></label>
+                                                <input name="realname" type="text" class="validate" placeholder="Nombre y Apellidos">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="row">                    
+                                        <div class="col-md-3">
+                                            <div class="input-field col s12">
+                                                <label><b>Usuario</b></label>
+                                                <input name="nick" type="text" class="validate" placeholder="Usuario" >
                                             </div>
                                         </div>
                                         
@@ -142,9 +157,9 @@ if (@!$_SESSION['user']) {
                                     <div class="row">
                                         
                                         <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label><strong>Usuario</strong></label>
-                                                <input name="nick" type="text" class="form-control" placeholder="Usuario" >
+                                            <div class="input-field col s12">
+                                                <label><b>Contraseña</b></label>
+                                                <input name="pass" type="password" class="validate" placeholder="Contraseña">
                                             </div>
                                         </div>
                                         
@@ -153,28 +168,16 @@ if (@!$_SESSION['user']) {
                                     <div class="row">
                                         
                                         <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label><strong>Contraseña</strong></label>
-                                                <input name="pass" type="password" class="form-control" placeholder="Contraseña">
+                                            <div class="input-field col s12">
+                                                <label><b>Repita la contraseña</b></label>
+                                                <input name="rpass" type="password" class="validate" placeholder="Repita la contraseña">
                                             </div>
                                         </div>
                                         
-                                    </div>
+                                    </div>                
+                                    <button style= "position:relative; top:-10px; left:25px; visibility:visible z-index:1" type="submit" class="z-depth-5 btn btn-fill waves-effect waves-light blue darken-2">REGISTRAR</button>
+                                    <div class="clearfix"></div>   
 
-                                    <div class="row">
-                                        
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label><strong>Repita la contraseña</strong></label>
-                                                <input name="rpass" type="password" class="form-control" placeholder="Repita la contraseña">
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                  
-                                    <button type="submit" class="z-depth-2 btn btn-sucess btn-info btn-fill pull-left">REGISTRAR</button>
-                                    <div class="clearfix"></div>
-                                    
                                     </div>
                                 </form>
                             </div>
@@ -187,14 +190,16 @@ if (@!$_SESSION['user']) {
 
 </body>
 
-    <!--   Core JS Files   -->
+   <!--   Core JS Files   -->
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	
 	<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 	
-	
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<!--<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>-->
@@ -211,16 +216,13 @@ if (@!$_SESSION['user']) {
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<!--<script src="assets/js/demo.js"></script>-->
 	
-	
 
-	<!--<script type="text/javascript">
+	<script type="text/javascript">
     	
         $(document).ready(function(){
 
         	demo.initChartist();
 
     	});
-
-	</script>-->
 
 </html>

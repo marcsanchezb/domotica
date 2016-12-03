@@ -7,7 +7,7 @@ if (@!$_SESSION['user']) {
 }
 ?>
 
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8" />
 	<link href="images/graphicloads.ico" rel="shortcut icon">
@@ -30,6 +30,8 @@ if (@!$_SESSION['user']) {
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
+	<!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
 
     <!-- Animation library for notifications   -->
@@ -54,7 +56,7 @@ if (@!$_SESSION['user']) {
             </div>
 
             <ul class="nav">
-                <li class="active">
+                <li>
                     <a href="luces.php">
                         <i class="pe-7s-light"></i>
                         <p>Iluminación</p>
@@ -66,7 +68,7 @@ if (@!$_SESSION['user']) {
                         <p>Monitoreo</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="sonido.php">
                         <i class="pe-7s-music"></i>
                         <p>Sonido Multizona</p>
@@ -98,14 +100,14 @@ if (@!$_SESSION['user']) {
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="index.php">
-                           <i class="pe-7s-home"></i>
-                               Inicio
+                           <div class="pe-7s-home"></div>
+                                <b>Inicio</b>
                             </a>
                         </li>
                         <li>
                             <a href="logout.php">
-                            <i class="pe-7s-power"></i>
-                                Salir
+                            <div class="pe-7s-power"></div>
+                               <b>Salir</b>
                             </a>
                         </li>
                     </ul>
@@ -114,8 +116,12 @@ if (@!$_SESSION['user']) {
         </nav>
 
 <center>
-</center>
 
+
+<iframe src="http://:123@192.168.1.5:43822/" width="100%" height="850" align="center"> </iframe>
+
+
+</center>
       
 </body>
 
@@ -126,7 +132,9 @@ if (@!$_SESSION['user']) {
 	<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 	
-	
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<!--<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>-->

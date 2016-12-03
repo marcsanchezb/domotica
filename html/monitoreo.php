@@ -37,7 +37,7 @@ if (@!$_SESSION['user']) {
      <script src='http://api.html5media.info/1.1.8/html5media.min.js'></script>
      <script src="js/index.js"></script>
 
-     <!--Import materialize.css-->
+    <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
 
@@ -65,13 +65,13 @@ if (@!$_SESSION['user']) {
             </div>
 
             <ul class="nav">
-                <li class="active">
+                <li>
                     <a href="luces.php">
                         <i class="pe-7s-light"></i>
                         <p>Iluminación</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="monitoreo.php">
                         <i class="pe-7s-video"></i>
                         <p>Monitoreo</p>
@@ -109,27 +109,25 @@ if (@!$_SESSION['user']) {
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="index.php">
-                           <i class="pe-7s-home"></i>
-                               <strong>Inicio</strong>
+                           <div class="pe-7s-home"></div>
+                               <b>Inicio</b>
                             </a>
                         </li>
                         <li>
                             <a href="logout.php">
-                            <i class="pe-7s-power"></i>
-                               <strong>Salir</strong>
+                            <div class="pe-7s-power"></div>
+                               <b>Salir</b>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        
 <div class="content" >
         <div class="container-fluid">
             <div class="row">
 
-<div class="content" >
-        <div class="container-fluid">
-            <div class="row">
 
 <center>
 
@@ -140,8 +138,8 @@ if (@!$_SESSION['user']) {
            
               <div align="center" class="card">
 
-               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage').src='http://localhost:8081'"><i class="material-icons">videocam</i></button>
-               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage').src='images/zona_interior.png'"><i class="material-icons">videocam_off</i></button>
+               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large waves-effect waves-light blue darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mostrar" onclick="document.getElementById('myImage').src='http://192.168.1.5:8081'"><i class="material-icons">videocam</i></button>
+               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large waves-effect waves-light blue darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ocultar" onclick="document.getElementById('myImage').src='images/zona_interior.png'"><i class="material-icons">videocam_off</i></button>
 
             </div>
 
@@ -160,8 +158,8 @@ if (@!$_SESSION['user']) {
            
               <div align="center" class="card">
 
-               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage2').src='images/no_signal.jpg'"><i class="material-icons">videocam</i></button>
-               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large z-depth-2 waves-effect waves-light blue darken-1" onclick="document.getElementById('myImage2').src='images/zona_exterior.png'"><i class="material-icons">videocam_off</i></button>
+               <button style= "position:absolute; top:-70px; left:45px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large waves-effect waves-light blue darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mostrar" onclick="document.getElementById('myImage2').src='images/no_signal.jpg'"><i class="material-icons">videocam</i></button>
+               <button style= "position:absolute; top:-70px; left:110px; visibility:visible z-index:1" class="btn-floating z-depth-4 btn-large waves-effect waves-light blue darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ocultar" onclick="document.getElementById('myImage2').src='images/zona_exterior.png'"><i class="material-icons">videocam_off</i></button>
 
             </div>
 
@@ -181,6 +179,9 @@ if (@!$_SESSION['user']) {
 	<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 	
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	
 
 	<!--  Checkbox, Radio & Switch Plugins -->

@@ -7,7 +7,7 @@ if (@!$_SESSION['user']) {
 }
 ?>
 
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8" />
 	<link href="images/graphicloads.ico" rel="shortcut icon">
@@ -29,11 +29,16 @@ if (@!$_SESSION['user']) {
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+	<!--Dialogs-->
+    <link href="dialogs/css/sweetalert.css" rel="stylesheet" type="text/css"/>
+
 
     <!-- Animation library for notifications   -->
     <!-- <link href="assets/css/animate.min.css" rel="stylesheet"/>-->
@@ -57,7 +62,7 @@ if (@!$_SESSION['user']) {
             </div>
 
             <ul class="nav">
-                <li class="active">
+                <li>
                     <a href="luces.php">
                         <i class="pe-7s-light"></i>
                         <p>Iluminación</p>
@@ -75,7 +80,7 @@ if (@!$_SESSION['user']) {
                         <p>Sonido Multizona</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="voz.php">
                         <i class="pe-7s-micro"></i>
                         <p>Control por Voz</p>
@@ -101,14 +106,14 @@ if (@!$_SESSION['user']) {
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="index.php">
-                           <i class="pe-7s-home"></i>
-                               Inicio
+                           <div class="pe-7s-home"></div>
+                               <b>Inicio</b>
                             </a>
                         </li>
                         <li>
                             <a href="logout.php">
-                            <i class="pe-7s-power"></i>
-                                Salir
+                            <div class="pe-7s-power"></div>
+                               <b>Salir</b>
                             </a>
                         </li>
                     </ul>
@@ -116,19 +121,55 @@ if (@!$_SESSION['user']) {
             </div>
         </nav>
 
-<center> 
+<div class="content">
+        <div class="container-fluid">
+            <div class="row">
 
-	
-<button class="btn-floating btn waves-effect waves-light red" onclick="funcion()"><i class="material-icons">mic</i></button>
+                  <div class="col s12 m2">
+          <div class="card">
+        </div>
+            </div>
 
 
-</center>
+               <div class="col s12 m8">
+          <div class="card z-depth-5">
+            <div class="card-image z-depth-5">
+              <img id="myImage" src="images/home2.jpg">
+           
+              <div align="center" class="card">
+
+              <button style= "position:absolute; top:-75px; left:100px; visibility:visible z-index:1" class="btn-floating btn-large waves-effect waves-light red" onclick="funcion(), Materialize.toast('Hable ahora', 5000)"><i class="material-icons">mic</i></button>
+              <button style= "position:absolute; top:-75px; left:30px; visibility:visible z-index:1" class="btn-floating btn-large waves-effect waves-light blue tooltipped" data-position="bottom" data-delay="50" data-tooltip="Instrucciones" onclick="dialog()"><i class="material-icons">message</i></button>
+      
+      <script>
+      function dialog() {
+
+       swal("", "*************************************************************** INSTRUCCIONES PARA EL CONTROL POR VOZ *************************************************************** Para encender la luz de alguna de las zonas del hogar, primero debe presionar el boton rojo con el simbolo del micrófono e inmediatamente debe de decir el comando ENCENDER LUZ y seguido de esto debe de decir la zona del hogar que requiere que se encienda la luz. Ejemplo: Encender Luz Cocina. *************************************************************** Si requiere apagar la luz de alguna de las zonas del hogar debe de decir el comando APAGAR LUZ y seguido de esto debe de decir la zona del hogar que requiere que se apague la luz. Ejemplo: Apagar Luz Dormitorio. *************************************************************** El usuario actual no dispone de permisos para el control total de la iluminación del hogar, no podrá controlar la iluminación de las zonas llamadas SALA y JARDIN.")
+
+       }
+
+    </script>
+
+
+             </div>
+
+            </div>
+
+  		  </div>
+
+              </div>
+
+  			</div>
+
+  		</div>
+
+  </div>
 
 
       
 </body>
 
-    <!--   Core JS Files   -->
+   <!--   Core JS Files   -->
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	
@@ -138,6 +179,14 @@ if (@!$_SESSION['user']) {
 	<!-- Control por Voz  -->
 	<script type="text/javascript" src="voz/voice.js"></script>
 	<script src="voz/annyang.min.js"></script>
+	
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+	<!--Dialogs-->
+    <script src="dialogs/js/sweetalert.min.js"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<!--<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>-->
@@ -153,19 +202,15 @@ if (@!$_SESSION['user']) {
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<!--<script src="assets/js/demo.js"></script>-->
-	
-	
+
 
 	<script type="text/javascript">
     	
-        $(document).ready(function(){
-
-        	demo.initChartist();
-
-    	});
-
-
+    $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+ 	 });
 
 	</script>
+
 
 </html>
